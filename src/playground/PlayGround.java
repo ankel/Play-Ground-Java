@@ -74,23 +74,23 @@ public class PlayGround {
             System.out.println(cd.get(s));            
         }
         
-        ObjectName on = new ObjectName("my.playground:name=Ground");
-        mbs.registerMBean(new CarBean(), on);
-        
-        TabularData tb = (TabularData) mbs.getAttribute(on, "Map");
-        for (Object o : tb.keySet()) {
-            List l = (List) o;
-            for (Object obj : l) {
-                System.out.println("--");
-                System.out.println(obj.toString());
-            }
-        }
-        cd = (CompositeData) tb.get(new Object[] {"Hello"});
-        for(String s : cd.getCompositeType().keySet()) {
-            System.out.println("---");
-            System.out.println(s);
-            System.out.println(cd.get(s).getClass());
-            System.out.println(cd.get(s));
-        }
+//        ObjectName on = new ObjectName("my.playground:name=Ground");
+//        mbs.registerMBean(new CarBean(), on);
+//        
+//        TabularData tb = (TabularData) mbs.getAttribute(on, "Map");
+//        for (Object o : tb.keySet()) {
+//            List l = (List) o;
+//            for (Object obj : l) {
+//                System.out.println("--");
+//                System.out.println(obj.toString());
+//            }
+//        }
+//        cd = (CompositeData) tb.get(new Object[] {"Hello"});
+//        for(String s : cd.getCompositeType().keySet()) {
+//            System.out.println("---");
+//            System.out.println(s);
+//            System.out.println(cd.get(s).getClass());
+//            System.out.println(cd.get(s));
+//        }
     }
 }
